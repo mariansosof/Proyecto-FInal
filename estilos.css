@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f0e8;
+    color: #3b2920;
+}
+
+
+/* HEADER */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d1d17;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #d9a066;
+}
+
+
+/* INICIO */
+
+.hero {
+    height: 600px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("imagenes/principal.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+    max-width: 700px;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #d9a066;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* BOTÓN */
+
+.boton {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #9b633d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.boton:hover {
+    background-color: #70452c;
+}
+
+
+/* NOSOTROS */
+
+.nosotros {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    padding: 80px 10%;
+}
+
+.texto {
+    flex: 1;
+}
+
+.texto h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.texto h3 {
+    margin-top: 25px;
+    font-size: 22px;
+}
+
+.imagen {
+    flex: 1;
+}
+
+.imagen img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* CLÁSICOS */
+
+.clasicos {
+    padding: 80px 10%;
+    background-color: #e9dfd2;
+}
+
+.titulo {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tarjeta {
+    background-color: white;
+    width: 32%;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tarjeta h3 {
+    margin: 20px 10px 10px;
+    font-size: 23px;
+}
+
+.tarjeta p {
+    padding: 0 20px;
+    line-height: 1.6;
+}
+
+
+/* MENÚ */
+
+.menu {
+    background-color: #f5f0e8;
+    padding-bottom: 70px;
+}
+
+.menu-hero {
+    height: 350px;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+        url("imagenes/principal.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.menu-hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.menu-hero p {
+    font-size: 18px;
+}
+
+
+/* CATEGORÍAS */
+
+.categoria {
+    max-width: 900px;
+    margin: 60px auto 0;
+    padding: 0 25px;
+}
+
+.categoria h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #70452c;
+}
+
+
+/* PRODUCTOS */
+
+.producto {
+    background-color: white;
+
+    padding: 20px;
+
+    margin-bottom: 12px;
+
+    border-bottom: 1px solid #ddd;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px 20px;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.producto span {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.producto strong {
+    font-size: 18px;
+    color: #9b633d;
+}
+
+.producto p {
+    grid-column: 1 / 2;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #2d1d17;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px;
+}
+
+.copy {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+/* CELULARES */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .nosotros {
+        flex-direction: column;
+    }
+
+    .tarjetas {
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 100%;
+    }
+
+    .menu-hero h1 {
+        font-size: 38px;
+    }
+
+    .producto {
+        grid-template-columns: 1fr;
+    }
+
+    .producto strong {
+        margin-top: 5px;
+    }
+}
