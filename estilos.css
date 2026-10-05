@@ -1,3 +1,7 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,63 +13,98 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #ffffff;
-    color: #222;
+    font-family: Arial,Helvetica, sans-serif;
+    background: #dcd7d7;
+    color: #000000;
 }
 
 
-/* ================= HEADER ================= */
+/* =========================================================
+   HEADER
+========================================================= */
 
 header {
+    width: 100%;
     height: 90px;
+
     background: #080808;
-    color: white;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 0 7%;
+
+    position: relative;
+    z-index: 100;
+
+
 }
+       
+
+
+/* LOGO */
 
 .logo {
-    font-size: 27px;
-    line-height: 22px;
     color: #d5a76a;
+
+    font-size: 25px;
+
+    line-height: 0.9;
+
     font-weight: bold;
+
+    text-align: center;
 }
 
 .logo span {
     font-size: 15px;
+
     letter-spacing: 3px;
+
+    font-weight: normal;
 }
+
+
+/* NAVEGACIÓN */
 
 nav {
     display: flex;
+
+    align-items: center;
+
     gap: 30px;
 }
 
 nav a {
-    color: white;
+    color: rgb(241, 241, 241);
+
     text-decoration: none;
-    font-size: 13px;
+
+    font-size: 12px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #c69a65;
+    color: #d5a76a;
 }
 
 
-/* ================= HERO ================= */
+/* =========================================================
+   HERO
+========================================================= */
 
 .hero {
-    height: 500px;
+    width: 100%;
+    height: 200px;
 
-    background:
+    background-image:
         linear-gradient(
-            rgba(0,0,0,.45),
-            rgba(0,0,0,.45)
+            rgba(0, 0, 0, 0.38),
+            rgba(0, 0, 0, 0.38)
         ),
         url("https://static.wixstatic.com/media/4a2979_50abeef1f8b74d55b732bc7204aad09d~mv2.jpg");
 
@@ -73,381 +112,745 @@ nav a:hover {
     background-position: center;
 
     display: flex;
-    justify-content: center;
+
     align-items: center;
+    justify-content: center;
 
     text-align: center;
+
     color: white;
 }
 
-.hero h1 {
+
+.hero-contenido h1 {
     font-size: 55px;
-    font-weight: 300;
-    letter-spacing: 4px;
+
+    font-weight: 400;
+
+    line-height: 1.15;
+
+    letter-spacing: 2px;
 }
 
-.hero p {
-    font-size: 17px;
-    margin-top: 20px;
-}
 
 .linea {
     width: 70px;
+
     height: 1px;
+
     background: white;
-    margin: 20px auto;
+
+    margin: 25px auto;
 }
 
 
-/* ================= GALERÍA ================= */
+.hero-contenido p {
+    font-size: 17px;
 
-.galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-
-    padding: 60px 7%;
-}
-
-.foto {
-    height: 350px;
-    overflow: hidden;
-}
-
-.foto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition: .4s;
-}
-
-.foto img:hover {
-    transform: scale(1.05);
+    letter-spacing: 1px;
 }
 
 
-/* ================= BOTONES ================= */
-
-.boton-centro {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.boton-centro a,
-.boton-explorar {
-    display: inline-block;
-
-    padding: 10px 28px;
-
-    border: 1px solid #555;
-    border-radius: 20px;
-
-    text-decoration: none;
-    color: #333;
-
-    font-size: 13px;
-}
-
-.boton-centro a:hover,
-.boton-explorar:hover {
-    background: #111;
-    color: white;
-}
-
-
-/* ================= MENÚ ================= */
-
-.seccion-menu {
-    padding: 70px 7%;
-    background: #f5f5f2;
-}
-
-.titulo-seccion {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.titulo-seccion h2 {
-    font-size: 38px;
-    font-weight: 300;
-}
-
-.menu-imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.menu-imagenes img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-
-/* ================= NOSOTROS ================= */
+/* =========================================================
+   SOBRE NOSOTROS
+========================================================= */
 
 .nosotros {
-    padding: 100px 8%;
+    width: 100%;
+
+    padding: 100px 7%;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
 
-    gap: 70px;
+    grid-template-columns: 45% 55%;
+
+    gap: 50px;
+
     align-items: center;
+
+    background: #b9a79f;
+}
+
+
+/* TEXTO */
+
+.nosotros-texto {
+    padding-right: 30px;
 }
 
 .nosotros-texto h2 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
+    font-size: 38px;
 
-.nosotros-texto h3 {
-    font-size: 27px;
     font-weight: 400;
-    margin-bottom: 25px;
+
+    margin-bottom: 30px;
+
+    color: #222;
 }
 
 .nosotros-texto p {
-    line-height: 1.8;
-    margin-bottom: 20px;
+    font-size: 15px;
+
+    line-height: 1.9;
+
     color: #555;
+
+    margin-bottom: 20px;
 }
+
+
+/* IMÁGENES */
 
 .nosotros-imagenes {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns: repeat(2, 1fr);
+
     gap: 15px;
 }
 
 .nosotros-imagenes img {
     width: 100%;
-    height: 230px;
+
+    height: 260px;
+
     object-fit: cover;
 }
 
 .nosotros-imagenes img:last-child {
-    grid-column: span 2;
+    grid-column: 1 / 3;
+
+    height: 300px;
 }
 
 
-/* ================= VISIÓN ================= */
+/* =========================================================
+   MISIÓN Y VISIÓN
+========================================================= */
 
-.vision {
-    background: #111;
-    color: white;
+.mision-vision {
+    width: 100%;
 
-    padding: 80px 20%;
+    padding: 4px 7%;
+
+    background: #342222;
+}
+
+
+.tarjeta {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    background: #342222;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 60px;
+}
+
+
+.columna {
+    padding: 20px 45px;
 
     text-align: center;
 }
 
-.vision h2,
-.mision h2 {
-    font-size: 38px;
-    font-weight: 300;
-    margin-bottom: 30px;
+.columna:first-child {
+    border-right: 1px solid #999;
 }
 
-.vision p,
-.mision p {
+
+.columna h2 {
+    font-size: 35px;
+
+    font-weight: 400;
+
+    margin-bottom: 25px;
+
+    color: #fbf8f8;
+}
+
+
+.columna p {
+    font-size: 15px;
+
     line-height: 1.8;
+
+    color: #fbf8f8;
+
     margin-bottom: 20px;
 }
 
 
-/* ================= MISIÓN ================= */
+/* =========================================================
+   NUESTROS CLÁSICOS
+========================================================= */
 
-.mision {
-    padding: 80px 20%;
-    text-align: center;
-}
+.nuestros-clasicos {
+    position: relative;
 
-.mision p {
-    color: #555;
-}
-
-
-/* ================= CLÁSICOS ================= */
-
-.clasicos {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
-    background: #f2f0eb;
+    grid-template-rows: auto 700px;
+
+    column-gap: 0;
+
+    row-gap: 40px;
+
+    padding: 80px 7% 100px;
+
+    background: #b9a79f;
 }
 
-.clasicos-imagen img {
+
+/* TÍTULO PRINCIPAL */
+
+.nuestros-clasicos > h2:first-child {
+    grid-column: 1 / 3;
+
+    grid-row: 1;
+
+    text-align: center;
+
+    font-size: 42px;
+
+    font-weight: 400;
+
+    margin: 0;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   IMAGEN DE NUESTROS CLÁSICOS
+========================================================= */
+
+.nuestros-clasicos .imagen-clasicos {
+    grid-column: 1;
+
+    grid-row: 2;
+
     width: 100%;
+
+    height: 700px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.nuestros-clasicos .imagen-clasicos img {
+    width: 100%;
+
     height: 100%;
-    min-height: 650px;
+
+    display: block;
+
     object-fit: cover;
 }
 
-.clasicos-texto {
-    padding: 80px 10%;
-}
 
-.clasicos-texto h2 {
-    font-size: 40px;
-    font-weight: 300;
-    margin-bottom: 30px;
-}
+/* =========================================================
+   MENU SOBRE LA IMAGEN - PARTE INFERIOR
+========================================================= */
 
-.clasicos-texto h3 {
-    margin-bottom: 30px;
-    font-weight: 400;
-}
+.nuestros-clasicos .menu-titulo {
+    position: absolute;
 
-.clasicos-texto p {
-    color: #555;
-    line-height: 1.7;
-    margin-bottom: 25px;
-}
+    left: 50%;
 
-.boton-explorar {
-    margin-top: 15px;
-}
+    bottom: 85px;
 
+    transform: translateX(-50%);
 
-/* ================= PIE DE PÁGINA ================= */
+    margin: 0;
 
-footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-
-    background: #080808;
-    color: white;
-
-    border-top: 1px solid #777;
-}
-
-.pie-bloque {
-    min-height: 270px;
-
-    padding: 50px 25px;
+    width: 100%;
 
     text-align: center;
 
+    color: #ffffff;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    z-index: 20;
+}
+
+
+/* =========================================================
+   BOTÓN EXPLORAR
+========================================================= */
+
+.nuestros-clasicos .boton-explorar {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 35px;
+
+    transform: translateX(-50%);
+
+    margin: 0;
+
+    padding: 11px 28px;
+
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+
+    background: transparent;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    z-index: 20;
+
+    transition: 0.3s;
+}
+
+
+.nuestros-clasicos .boton-explorar:hover {
+    background: #ffffff;
+
+    color: #000000;
+}
+
+
+/* =========================================================
+   CATEGORÍAS
+========================================================= */
+
+.nuestros-clasicos .categorias {
+    grid-column: 2;
+
+    grid-row: 2;
+
+    width: 100%;
+
+    height: 700px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 0 !important;
+
+    padding: 0;
+
+    margin: 0;
+
+    background: #b9a79f;
+}
+
+
+/* =========================================================
+   CADA CATEGORÍA
+========================================================= */
+
+.nuestros-clasicos .categoria {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 45px 35px;
+
+    background: #b9a79f;
+
     display: flex;
+
     flex-direction: column;
 
-    align-items: center;
     justify-content: center;
+
+    border: none;
+}
+
+
+/* =========================================================
+   CRUZ CENTRAL
+========================================================= */
+
+/* LÍNEA HORIZONTAL */
+
+.nuestros-clasicos .categoria:nth-child(1),
+.nuestros-clasicos .categoria:nth-child(2) {
+    border-bottom: 1px solid #999;
+}
+
+
+/* LÍNEA VERTICAL */
+
+.nuestros-clasicos .categoria:nth-child(1),
+.nuestros-clasicos .categoria:nth-child(3) {
+    border-right: 1px solid #999;
+}
+
+
+/* =========================================================
+   TÍTULOS DE CATEGORÍAS
+========================================================= */
+
+.nuestros-clasicos .categoria h3 {
+    font-size: 27px;
+
+    font-weight: 400;
+
+    line-height: 1.25;
+
+    margin: 0 0 20px 0;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   TEXTO DE CATEGORÍAS
+========================================================= */
+
+.nuestros-clasicos .categoria p {
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin: 0;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    width: 100%;
+
+    background: #080808;
+
+    color: white;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 60px 7% 50px;
+}
+
+
+.pie-bloque {
+    text-align: center;
+
+    padding: 10px 30px;
 
     border-right: 1px solid #555;
 }
+
 
 .pie-bloque:last-child {
     border-right: none;
 }
 
+
 .icono {
-    font-size: 28px;
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+    color: #d5a76a;
+}
+
+
+.pie-bloque h3 {
+    font-size: 17px;
+
+    font-weight: 400;
+
     margin-bottom: 20px;
 }
 
-.pie-bloque h3 {
-    font-weight: 400;
-    margin-bottom: 18px;
-}
 
 .pie-bloque p {
-    color: #ccc;
-    line-height: 1.7;
-    font-size: 14px;
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    color: #cccccc;
 }
+
+
+/* REDES */
 
 .redes {
     display: flex;
+
+    justify-content: center;
+
     gap: 15px;
+
+    flex-wrap: wrap;
 }
+
 
 .redes a {
-    color: #ccc;
+    color: #cccccc;
+
     text-decoration: none;
+
     font-size: 13px;
+
+    transition: 0.3s;
 }
+
 
 .redes a:hover {
-    color: white;
+    color: #d5a76a;
 }
 
 
-/* ================= COPYRIGHT ================= */
+/* =========================================================
+   COPYRIGHT
+========================================================= */
 
 .copyright {
+    width: 100%;
+
+    padding: 18px;
+
     background: #080808;
+
+    border-top: 1px solid #333;
+
     color: #888;
 
-    text-align: right;
+    text-align: center;
 
-    padding: 15px 30px;
-
-    font-size: 12px;
+    font-size: 11px;
 }
 
 
-/* ================= CELULAR ================= */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
+
+    /* HEADER */
 
     header {
         height: auto;
-        padding: 20px;
+
+        padding: 25px 5%;
+
         flex-direction: column;
+
         gap: 20px;
     }
 
     nav {
         flex-wrap: wrap;
+
         justify-content: center;
+
+        gap: 15px;
     }
 
-    .hero h1 {
-        font-size: 38px;
+
+    /* HERO */
+
+    .hero {
+        height: 550px;
     }
 
-    .galeria,
-    .menu-imagenes {
+    .hero-contenido h1 {
+        font-size: 40px;
+    }
+
+
+    /* NOSOTROS */
+
+    .nosotros {
         grid-template-columns: 1fr;
+
+        padding: 70px 5%;
     }
 
-    .nosotros,
-    .clasicos {
-        grid-template-columns: 1fr;
+    .nosotros-texto {
+        padding-right: 0;
     }
+
+
+    /* MISIÓN Y VISIÓN */
+
+    .tarjeta {
+        grid-template-columns: 1fr;
+
+        padding: 35px 20px;
+    }
+
+    .columna {
+        padding: 30px 20px;
+    }
+
+    .columna:first-child {
+        border-right: none;
+
+        border-bottom: 1px solid #999;
+    }
+
+
+    /* NUESTROS CLÁSICOS */
+
+    .nuestros-clasicos {
+        grid-template-columns: 1fr;
+
+        grid-template-rows: auto 600px auto;
+
+        padding: 60px 5% 80px;
+
+        row-gap: 30px;
+    }
+
+
+    .nuestros-clasicos > h2:first-child {
+        grid-column: 1;
+
+        grid-row: 1;
+    }
+
+
+    .nuestros-clasicos .imagen-clasicos {
+        grid-column: 1;
+
+        grid-row: 2;
+
+        height: 600px;
+    }
+
+
+    .nuestros-clasicos .categorias {
+        grid-column: 1;
+
+        grid-row: 3;
+
+        height: 650px;
+    }
+
+
+    .nuestros-clasicos .menu-titulo {
+        font-size: 32px;
+
+        bottom: 85px;
+    }
+
+
+    .nuestros-clasicos .boton-explorar {
+        bottom: 35px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 30px;
+
+        padding: 50px 5%;
+    }
+
+    .pie-bloque:nth-child(2) {
+        border-right: none;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-contenido h1 {
+        font-size: 32px;
+    }
+
+
+    .hero-contenido p {
+        font-size: 14px;
+    }
+
 
     .nosotros-imagenes {
         grid-template-columns: 1fr;
     }
 
     .nosotros-imagenes img:last-child {
-        grid-column: auto;
+        grid-column: 1;
     }
 
-    .vision,
-    .mision {
-        padding: 60px 10%;
+
+    .nuestros-clasicos .categorias {
+        height: auto;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: repeat(4, auto);
     }
 
-    footer {
-        grid-template-columns: 1fr 1fr;
+
+    .nuestros-clasicos .categoria {
+        min-height: 250px;
+
+        padding: 35px 25px;
+
+        border: none !important;
+
+        border-bottom: 1px solid #999 !important;
     }
 
-}
 
-@media (max-width: 500px) {
+    .nuestros-clasicos .categoria:last-child {
+        border-bottom: none !important;
+    }
+
 
     footer {
         grid-template-columns: 1fr;
+
+        gap: 0;
     }
+
 
     .pie-bloque {
         border-right: none;
+
         border-bottom: 1px solid #555;
+
+        padding: 30px;
     }
 
+
+    .pie-bloque:last-child {
+        border-bottom: none;
+    }
 }
