@@ -854,3 +854,322 @@ footer {
         border-bottom: none;
     }
 }
+
+
+
+
+
+/* =========================================
+   MENÚ - PANTALLA COMPLETA
+========================================= */
+
+.menu {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 30px 4% 40px;
+}
+
+/* TÍTULO */
+
+   .menu > h1 {
+    text-align: left;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: #efbc2e;
+    margin: 0 0 30px;
+}
+
+
+/* =========================================
+   COLUMNAS
+========================================= */
+
+.menu-contenedor {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 6%;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   CATEGORÍAS
+========================================= */
+
+.categoria {
+    width: 100%;
+
+    margin-bottom: 25px;
+}
+
+.categoria h2 {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #efbc2e;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin: 0 0 2px;
+}
+
+.categoria h2::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background-color: #b9a79f;
+}
+
+
+/* =========================================
+   PRODUCTOS
+========================================= */
+body {
+    background-color: #b9a79f;
+    color: #4a2f22;
+}
+
+.producto {
+    width: 100%;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #ddd5cd;
+     text-align: left;
+
+}
+
+.producto-superior {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+
+
+    gap: 20px;
+}
+
+.producto h3 {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #4a2f22;
+}
+
+.producto p {
+    width: 100%;
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: #5a403a;
+}
+
+
+.producto span {
+    font-size: 14px;
+
+    color: #4a2f22;
+
+    white-space: nowrap;
+}
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+
+    background-color: #3c2922;
+
+    padding: 30px 4% 15px;
+}
+
+.footer-contenedor {
+    width: 100%;
+    max-width: none;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 6%;
+}
+
+.footer-columna h3 {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    color: #d1a96b;
+
+    margin-bottom: 8px;
+}
+
+.footer-columna p,
+.footer-columna a {
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    color: #ddd3cb;
+}
+
+.footer-columna a {
+    display: block;
+
+    text-decoration: none;
+}
+
+.footer-columna a:hover {
+    color: #d1a96b;
+}
+
+.footer-final {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding-top: 10px;
+
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    text-align: center;
+}
+
+.footer-final p {
+    font-size: 11px;
+
+    color: #bfb3ab;
+}
+
+
+/* =========================================
+   PC / PANTALLAS GRANDES
+========================================= */
+
+@media (min-width: 1200px) {
+
+    .menu {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .menu > h1 {
+        margin-bottom: 25px;
+    }
+
+    .menu-contenedor {
+        column-gap: 5%;
+    }
+
+    .categoria {
+        margin-bottom: 20px;
+    }
+
+    .producto {
+        padding: 8px 0;
+    }
+}
+
+
+/* =========================================
+   PANTALLAS MUY GRANDES
+========================================= */
+
+@media (min-width: 1600px) {
+
+    .menu {
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+
+    .menu-contenedor {
+        column-gap: 4%;
+    }
+
+    .producto h3 {
+        font-size: 16px;
+    }
+
+    .producto p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 700px) {
+
+    .menu {
+        width: 100%;
+        padding: 30px 7% 40px;
+    }
+
+    .menu > h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .menu-contenedor {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .categoria {
+        margin-bottom: 35px;
+    }
+
+    .categoria h2 {
+        font-size: 19px;
+    }
+
+    .producto h3 {
+        font-size: 14px;
+    }
+
+    .producto span {
+        font-size: 13px;
+    }
+
+    .producto p {
+        font-size: 12px;
+    }
+
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
